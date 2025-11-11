@@ -9,30 +9,48 @@ const sql = postgres(process.env.POSTGRES_URL!, { ssl: 'require' })
 
 const FormSchema = z.object({
     id: z.string(),
-    title: z.string(),
-    description: z.string(),
+    text: z.string(),
 })
 
-const CreateBlog = FormSchema.omit({ id: true })
+const CreateText = FormSchema.omit({ id: true })
+const UpdateText = FormSchema.omit({ id: true })
 
 export type State = {
     errors?: {
-        title?: string[];
-        string?: string[];
+        text?: string[];
     }
 }
 
-export async function createBlog(formData: FormData) {
-    const { title, description } = CreateBlog.parse({
-        title: formData.get('title'),
-        description: formData.get('description'),
+export async function createText(formData: FormData) {
+    const { text } = CreateText.parse({
+        text: formData.get('text')
     })
 
     await sql`
-        INSERT INTO blogs (title, description)
-        VALUES (${title}, ${description})
+        INSERT INTO texts (text)
+        VALUES (${text})
     `
 
     revalidatePath('/admin')
     redirect('/admin')
+}
+
+export async function updateText(id: string, formData: FormData) {
+    const { text } = UpdateText.parse({
+        text: formData.get('text')
+    })
+
+    await sql`
+        UPDATE texts
+        SET text = ${text}
+        WHERE id = ${id}
+    `
+
+    revalidatePath('/admin')
+    redirect('/admin')
+}
+
+export async function deleteText(id: string) {
+    await sql`DELETE FROM texts WHERE id=${id}`
+    revalidatePath('/admin')
 }

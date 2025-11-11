@@ -1,17 +1,14 @@
-export const blogs = [
+export const texts = [
     {
-        id: '19a32979-8a99-4fd4-9c13-74a7dee5f871',
-        title: 'Jesus Christ',
-        description: 'Jesus Christ is the Son of God,',
+        id: '73b4ee14-9f87-41ee-a022-00cc7e7352bb',
+        text: 'Jesus Christ',
     },
     {
-        id: '297f7dfc-8652-4d80-9568-6d55c1ba4e4f',
-        title: 'Gospels',
-        description: 'There are four Gospel messages on our Lord Jesus Christ',
+        id: '0ce56a63-d636-4022-80ae-a6cb1d10af82',
+        text: 'Gospels',
     },
     {
-        id: '74ce5349-ac70-42a7-aca3-886e57acfe7e',
-        title: 'Mark',
-        description: 'Mark is the shortest Gospel among the four Gospels.',
+        id: 'c45a7a16-ace2-4a5c-a3ba-fe5159d06952',
+        text: 'Mark',
     },
 ]

@@ -1,16 +1,19 @@
-import { fetchBlogs } from "@/app/lib/data"
-import { Blog } from '../../lib/definitions'
+import { fetchTexts } from "@/app/lib/data"
+import { Text } from '../../lib/definitions'
+import { Update, Delete } from './buttons'
 
 export default async function Table() {
-    const blogs = await fetchBlogs()
+    const texts = await fetchTexts()
 
-    console.log(`blogs ${blogs}`)
+    texts.map(i => console.log(i.id))
+
     return (
         <div>
-            {blogs?.map((blog:Blog) => (
-                <div key={blog.id}>
-                    <h2>{blog.title}</h2>
-                    <p>{blog.description}</p>
+            {texts?.map((text:Text) => (
+                <div key={text.id}>
+                    <p>{text.text}</p>
+                    <Update id={text.id}/>
+                    <Delete id={text.id}/>
                 </div>
             ))}
         </div>

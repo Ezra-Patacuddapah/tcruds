@@ -2,10 +2,10 @@ import postgres from 'postgres'
 
 const sql = postgres(process.env.POSTGRES_URL_NON_POOLING!, { ssl: 'require' })
 
-async function listBlogs() {
+async function listTexts() {
     const data = await sql`
-        SELECT blogs.title, blogs.description
-        FROM blogs
+        SELECT texts.text
+        FROM texts
     `
 
     return data
@@ -13,7 +13,7 @@ async function listBlogs() {
 
 export async function GET() {
     try {
-        return Response.json(await listBlogs())
+        return Response.json(await listTexts())
     } catch (error) {
         return Response.json({ error }, { status: 500 })
     }

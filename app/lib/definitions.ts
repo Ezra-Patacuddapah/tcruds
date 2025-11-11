@@ -1,5 +1,4 @@
-export type Blog = {
+export type Text = {
     id: string;
-    title: string;
-    description: string;
+    text: string;
 }
