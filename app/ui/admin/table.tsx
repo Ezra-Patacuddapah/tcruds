@@ -12,8 +12,8 @@ export default async function Table() {
             {texts?.map((text:Text) => (
                 <div key={text.id}>
                     <p>{text.text}</p>
-                    <Update id={text.id}/>
-                    <Delete id={text.id}/>
+                    <Update id={text.id} />
+                    <Delete id={text.id} />
                 </div>
             ))}
         </div>
