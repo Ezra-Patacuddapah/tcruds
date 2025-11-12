@@ -1,10 +1,14 @@
-import { fetchTexts } from '../lib/data'
-import { Text } from '../lib/definitions'
+import { Text } from '../lib/definitions';
+import { fetchFilteredTexts } from "@/app/lib/data";
 
-export default async function Table() {
-    const texts = await fetchTexts()
+export default async function Table({
+    query
+}: {
+    query: string;
+}) {
+    const texts = await fetchFilteredTexts(query)
 
-    texts.map(i => console.log(i.text))
+    texts.map(i => console.log(i.id))
 
     return (
         <div>
