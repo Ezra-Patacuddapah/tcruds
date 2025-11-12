@@ -19,10 +19,11 @@ export default function Search() {
     }, 300)
 
     return (
-        <div>
+        <div className="flex justify-center items-center">
             <input
                 onChange={e => {handleSearch(e.target.value)}}
                 defaultValue={searchParams.get('query')?.toString()}
+                className='pl-2 border border-white rounded-md'
             />
         </div>
     )
