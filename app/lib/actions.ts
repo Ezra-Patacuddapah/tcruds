@@ -50,6 +50,7 @@ export async function updateText(id: string, formData: FormData) {
     revalidatePath('/admin')
     revalidatePath('/')
     redirect('/admin')
+    redirect('/')
 }
 
 export async function deleteText(id: string) {
