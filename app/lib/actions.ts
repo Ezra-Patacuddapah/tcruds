@@ -32,7 +32,8 @@ export async function createText(formData: FormData) {
     `
 
     revalidatePath('/')
-    redirect('/')
+    revalidatePath('/admin')
+    redirect('/admin')
 }
 
 export async function updateText(id: string, formData: FormData) {
@@ -47,10 +48,12 @@ export async function updateText(id: string, formData: FormData) {
     `
 
     revalidatePath('/')
-    redirect('/')
+    revalidatePath('/admin')
+    redirect('/admin')
 }
 
 export async function deleteText(id: string) {
     await sql`DELETE FROM texts WHERE id=${id}`
     revalidatePath('/')
+    revalidatePath('/admin')
 }
