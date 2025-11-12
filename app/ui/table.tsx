@@ -1,4 +1,4 @@
-import { fetchTexts } from "@/app/lib/data"
+import { fetchTexts } from '../lib/data'
 import { Text } from '../lib/definitions'
 
 export default async function Table() {
