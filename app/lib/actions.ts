@@ -33,7 +33,7 @@ export async function createText(formData: FormData) {
 
     revalidatePath('/admin')
     revalidatePath('/')
-    redirect('/admin')
+    redirect('/')
 }
 
 export async function updateText(id: string, formData: FormData) {
@@ -49,7 +49,6 @@ export async function updateText(id: string, formData: FormData) {
 
     revalidatePath('/admin')
     revalidatePath('/')
-    redirect('/admin')
     redirect('/')
 }
 
