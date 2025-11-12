@@ -4,7 +4,7 @@ import { Text } from '../lib/definitions'
 export default async function Table() {
     const texts = await fetchTexts()
 
-    texts.map(i => console.log(i.id))
+    texts.map(i => console.log(i.text))
 
     return (
         <div>
