@@ -19,7 +19,7 @@ export default async function Page(props: {
     return (
         <div>
             <Create />
-            <Search />
+            <Search placeholder='Search...'/>
             <Table query={query} />
         </div>
     )

@@ -3,7 +3,7 @@
 import { useSearchParams, usePathname, useRouter } from "next/navigation"
 import { useDebouncedCallback } from 'use-debounce'
 
-export default function Search() {
+export default function Search({ placeholder }: { placeholder: string }) {
     const searchParams = useSearchParams()
     const pathname = usePathname()
     const { replace } = useRouter()
@@ -23,6 +23,7 @@ export default function Search() {
             <input
                 onChange={e => {handleSearch(e.target.value)}}
                 defaultValue={searchParams.get('query')?.toString()}
+                placeholder={placeholder}
                 className='pl-2 border border-white rounded-md'
             />
         </div>
