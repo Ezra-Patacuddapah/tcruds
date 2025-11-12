@@ -1,4 +1,4 @@
-import Table from "./ui/admin/table"
+import Table from "./ui/table"
 
 export default function Page() {
   return (
