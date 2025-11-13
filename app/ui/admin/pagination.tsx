@@ -20,7 +20,7 @@ export default function Pagination({ totalPages }: { totalPages: number }) {
 
     return (
         <>
-            <div className='flex justify-center items-center fixed bottom-10 left-0 right-0'>
+            <div className='flex justify-center items-center md:fixed bottom-10 left-0 right-0'>
                 <PaginationNav
                     direction='left'
                     href={createPageURL(currentPage - 1)}
