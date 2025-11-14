@@ -5,7 +5,7 @@ export function Create() {
     return (
         <Link
             href="/admin/create"
-            className='bg-gray-600 rounded-md py-1 px-2 m-1 fixed bottom-1 right-1 md:bottom-5 md:right-5'
+            className='bg-gray-600 rounded-md py-1 px-2 md:m-1 fixed bottom-1 right-1 md:bottom-5 md:right-5'
         >
             Create
         </Link>

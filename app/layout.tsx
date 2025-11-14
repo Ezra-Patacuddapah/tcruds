@@ -1,5 +1,7 @@
 import '@/app/globals.css'
 import { Metadata } from 'next'
+import MainNav from './ui/mainnav';
+import Logo from './ui/logo';
 
 export const metadata: Metadata = {
   title: {
@@ -17,7 +19,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className='bg-gray-800 text-white antialiased'>
+        <Logo />
         {children}
+        <MainNav />
       </body>
     </html>
   )
