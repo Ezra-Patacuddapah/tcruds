@@ -5,7 +5,7 @@ import Logo from './ui/logo';
 
 export const metadata: Metadata = {
   title: {
-    template: '%s',
+    template: '%s | My App',
     default: 'My App',
   },
   description: 'My app is developed by Ezra.'
