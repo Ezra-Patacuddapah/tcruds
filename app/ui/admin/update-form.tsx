@@ -20,7 +20,7 @@ export default function UpdateTextForm({ text }: { text: Text} ) {
                 <Link
                     href='/admin'
                 >
-                    <Button>Cancel</Button>
+                    <Button className='mx-1'>Cancel</Button>
                 </Link>
                 <Button type="submit">Update</Button>
             </form>

@@ -31,7 +31,7 @@ export default async function Page(props: {
                 <Table query={query} currentPage={currentPage} />
             </Suspense>
             <Pagination totalPages={totalPages} />
-            <div className='fixed left-5 bottom-5'>
+            <div className='fixed bottom-1 left-1 md:bottom-5 md:left-5'>
                 <SignOut />
             </div>
         </div>

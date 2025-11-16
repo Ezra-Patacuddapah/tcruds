@@ -1,4 +1,5 @@
 import { signOut } from "@/auth";
+import { Button } from "../button";
 
 export default function SignOut() {
     return (
@@ -7,7 +8,7 @@ export default function SignOut() {
                 await signOut({ redirectTo: '/'})
             }}
             >
-                <button className="bg-gray-600 rounded-md py-1 px-2 m-1">Sign Out</button>
+                <Button className="">Sign Out</Button>
             </form>
 
     )
