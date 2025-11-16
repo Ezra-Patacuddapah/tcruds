@@ -22,7 +22,7 @@ export default function UpdateTextForm({ text }: { text: Text} ) {
                 >
                     <Button className='mx-1'>Cancel</Button>
                 </Link>
-                <Button type="submit">Update</Button>
+                <Button type="submit">Save</Button>
             </form>
             <div id="text-error" aria-live='polite' aria-atomic='true' className='flex-inline'>
                 {state.errors?.text &&

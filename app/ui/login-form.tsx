@@ -13,17 +13,23 @@ export default function LoginForm() {
         undefined,
     )
 
+    const inputStyles = "py-1 pl-2 border border-white rounded-md mr-1"
+
     return (
-        <form action={formAction}>
-            <label htmlFor="name">Name</label>
+        <form 
+            action={formAction}
+            className="flex flex-col m-5 justify-center items-center"
+        >
+            <label htmlFor="name" className="my-1">Name</label>
             <input 
                 type="text" 
                 id="name"
                 name="name"
                 placeholder="Enter name"
                 required
+                className={inputStyles}
             />
-            <label htmlFor="password">Password</label>
+            <label htmlFor="password" className="my-1">Password</label>
             <input 
                 type="password" 
                 id="password"
@@ -31,13 +37,14 @@ export default function LoginForm() {
                 placeholder="Enter password"
                 required
                 minLength={6}
+                className={inputStyles}
             />
             <input
                 type="hidden"
                 name="redirectTo"
                 value={callbackUrl}
             />
-            <Button aria-disabled={isPending}>Log in</Button>
+            <Button aria-disabled={isPending} className="mt-2">Log in</Button>
             <div
                 aria-live="polite"
                 aria-atomic="true"

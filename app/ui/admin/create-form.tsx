@@ -19,7 +19,7 @@ export default function Form() {
                 >
                     <Button className='mx-1'>Cancel</Button>
                 </Link>
-                <Button type="submit" className=''>Create</Button>
+                <Button type="submit" className=''>Save</Button>
             </form>
             <div id="text-error" aria-live='polite' aria-atomic='true'>
                 {state.errors?.text &&
