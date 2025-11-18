@@ -18,7 +18,11 @@ export function TextsSkeleton() {
 
 export function TextsTableSkeleton() {
     return (
-        <div className="grid grid-cols-1 md:grid-cols-3 md:px-30 gap-3 mt-3">
+        <div className="grid grid-cols-2 m-1 md:grid-cols-3 md:px-30 gap-3 mt-3">
+            <TextsSkeleton />
+            <TextsSkeleton />
+            <TextsSkeleton />
+            <TextsSkeleton />
             <TextsSkeleton />
             <TextsSkeleton />
             <TextsSkeleton />

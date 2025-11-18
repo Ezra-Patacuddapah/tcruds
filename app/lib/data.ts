@@ -35,7 +35,7 @@ export async function fetchTextById(id: string) {
     }
 }
 
-const ITEMS_PER_PAGE = 6
+const ITEMS_PER_PAGE = 10
 export async function fetchFilteredTexts(
     query: string,
     currentPage: number,
@@ -46,11 +46,13 @@ export async function fetchFilteredTexts(
         const data = await sql<Text[]>`
             SELECT
             texts.id,
-            texts.text
+            texts.text,
+            texts.created_at,
+            texts.updated_at
             FROM texts
             WHERE 
             texts.text::text ILIKE ${`%${query}%`}
-            ORDER BY texts.id DESC
+            ORDER BY GREATEST(created_at, COALESCE(updated_at, created_at)) DESC
             LIMIT ${ITEMS_PER_PAGE} OFFSET ${offset}
         `
 

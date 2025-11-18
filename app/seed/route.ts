@@ -37,15 +37,17 @@ async function seedTexts() {
     await sql`
         CREATE TABLE IF NOT EXISTS texts (
             id UUID DEFAULT uuid_generate_v4() PRIMARY KEY,
-            text VARCHAR(255) NOT NULL
+            text VARCHAR(255) NOT NULL,
+            created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+            updated_at TIMESTAMP WITH TIME ZONE
         )
     `
 
     const insertedTexts = await Promise.all(
         texts.map(
-            (text) => sql`
-                INSERT INTO texts (id, text)
-                VALUES (${text.id}, ${text.text})
+            text => sql`
+                INSERT INTO texts (id, text, created_at, updated_at)
+                VALUES (${text.id}, ${text.text}, ${text.created_at}, ${text.updated_at})
                 ON CONFLICT (id) DO NOTHING;
             `
         )
@@ -56,7 +58,7 @@ async function seedTexts() {
 
 export async function GET() {
     try {
-        await sql.begin((sql) => [
+        await sql.begin(sql => [
             seedTexts(),
             seedAdmins(),
         ])
