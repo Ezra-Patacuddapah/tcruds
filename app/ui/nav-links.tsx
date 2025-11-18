@@ -10,7 +10,7 @@ const links = [
         name: <HomeIcon className="w-5 h-5" />, href: '/', id: 1,
     },
     {
-        name: <UserIcon className="w-5 h-5" />, href: '/admin', id: 2,
+        name: <UserIcon className="w-5 h-5 fixed right-2" />, href: '/admin', id: 2,
     },
 ]
 
@@ -19,7 +19,7 @@ export default function NavLinks() {
 
     return (
         <>
-            <div className="flex justify-center items-center gap-1 fixed bottom-1 md:bottom-5 left-1 z-20">
+            <div className="flex justify-center items-center gap-1 fixed bottom-2 md:bottom-5 left-2 z-20">
                 {links.map(link => {
                     return (
                         <Link
@@ -28,7 +28,7 @@ export default function NavLinks() {
                             >
                             <button 
                                 className={clsx(
-                                    'flex w-auto items-center justify-center text-sm font-medium hover:bg-sky-100 hover:text-blue-600 rounded-sm',
+                                    'flex w-auto items-center justify-between hover:bg-sky-100 hover:text-blue-600 rounded-sm',
                                     {
                                         'bg-sky-100 text-blue-600': pathname === link.href,
                                         'hidden': pathname === '/admin' || pathname === '/login' || pathname === '/admin/create' || pathname === '/admin/update',

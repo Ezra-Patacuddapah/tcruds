@@ -5,10 +5,10 @@ import Logo from './ui/logo';
 
 export const metadata: Metadata = {
   title: {
-    template: '%s | My App',
-    default: 'My App',
+    template: '%s | T CRUD S',
+    default: 'T CRUD S',
   },
-  description: 'My app is developed by Ezra.'
+  description: 'T CRUD S is developed by Ezra.'
 }
 
 export default function RootLayout({

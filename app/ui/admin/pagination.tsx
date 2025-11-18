@@ -4,8 +4,7 @@ import clsx from 'clsx'
 import Link from 'next/link'
 import { generatePagination } from '@/app/lib/utils'
 import { usePathname, useSearchParams } from 'next/navigation'
-import { Button } from '../button'
-
+import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/solid'
 export default function Pagination({ totalPages }: { totalPages: number }) {
     const pathname = usePathname()
     const searchParams = useSearchParams()
@@ -113,9 +112,13 @@ function PaginationNav ({
 
     const navBtn = 
         direction === 'left' ? (
-            <button>Left</button>
+            <button>
+                <ChevronLeftIcon className='w-5 h-5' />
+            </button>
         ) : (
-            <button>Right</button>
+            <button>
+                <ChevronRightIcon className='w-5 h-5' />
+            </button>
         )
 
     return isDisabled ? (
