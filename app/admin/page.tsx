@@ -36,7 +36,7 @@ export default async function Page(props: {
             <div className="fixed left-0 right-0 bottom-0">
                 <Pagination totalPages={totalPages} />
             </div>
-            <div className='fixed bottom-1 left-1 md:bottom-5 md:left-5'>
+            <div className='fixed bottom-4 left-4 md:bottom-5 md:left-5'>
                 <SignOut />
             </div>
             <Create />
