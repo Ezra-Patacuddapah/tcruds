@@ -25,7 +25,6 @@ export default async function Page(props: {
 
     return (
         <div>
-            <Create />
             <div className="fixed left-0 right-0 top-2">
                 <Search placeholder="Search..." />
             </div>
@@ -40,6 +39,7 @@ export default async function Page(props: {
             <div className='fixed bottom-1 left-1 md:bottom-5 md:left-5'>
                 <SignOut />
             </div>
+            <Create />
         </div>
     )
 }

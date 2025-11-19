@@ -27,7 +27,7 @@ export default async function Page(props: {
                     <Table query={query} currentPage={currentPage} />
                 </Suspense>
             </div>
-            <div className="fixed left-0 right-0 bottom-0">
+            <div className="fixed left-20 right-20 bottom-40">
                 <Pagination totalPages={totalPages} />
             </div>
         </div>
