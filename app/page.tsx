@@ -22,7 +22,7 @@ export default async function Page(props: {
             <div className="fixed left-0 right-0 top-2">
                 <Search placeholder="Search..." />
             </div>
-            <div className="mt-15">
+            <div className="mt-15 md:mt-30">
                 <Suspense key={query + currentPage} fallback={<TextsTableSkeleton />}>
                     <Table query={query} currentPage={currentPage} />
                 </Suspense>

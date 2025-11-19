@@ -11,9 +11,9 @@ export function Create() {
         >
             <button
                 type='submit'
-                className='fixed bottom-1 right-1'
+                className='fixed bottom-4 right-4'
             >
-                <PlusCircleIcon className={`w-8 h-8 ${className} animate-pulse`} />
+                <PlusCircleIcon className={`w-8 h-8 md:w-12 md:h-12 ${className} animate-pulse`} />
             </button>
         </Link>
     )
