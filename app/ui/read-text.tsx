@@ -8,7 +8,7 @@ export default function ReadText({ text }: { text: Text} ) {
     return (
         <>
             <div>
-                <p className='text-6xl text-shadow-white mt-30'>{text.text}</p>
+                <p className='text-6xl text-shadow-white mt-30 px-5 text-center'>{text.text}</p>
             </div>
             <CancelAdmin />
         </>
