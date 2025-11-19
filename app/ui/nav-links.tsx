@@ -10,7 +10,7 @@ const links = [
         name: <HomeIcon className="w-5 h-5" />, href: '/', id: 1,
     },
     {
-        name: <ArrowRightEndOnRectangleIcon className="w-5 h-5 fixed right-2" />, href: '/admin', id: 2,
+        name: <ArrowRightEndOnRectangleIcon className="w-5 h-5 fixed right-2 text-blue-400" />, href: '/admin', id: 2,
     },
 ]
 
