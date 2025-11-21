@@ -24,3 +24,19 @@ export function CancelAdmin() {
         </Link>
     )
 }
+
+export function CancelPage() {
+    return (
+        <Link
+            href="#"
+            onClick={e => {
+                e.preventDefault()
+                window.history.back()
+            }}
+        >
+            <button type="button">
+                    <XMarkIcon className='w-6 h-6 mt-2 mr-1 text-blue-400 fixed top-1 right-1' />
+            </button>
+        </Link>
+    )
+}

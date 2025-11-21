@@ -1,7 +1,7 @@
 'use client'
 
 import { Text } from '@/app/lib/definitions'
-import { CancelAdmin } from './admin/cancel'
+import { CancelPage } from './admin/cancel'
 
 export default function ReadText({ text }: { text: Text} ) {
 
@@ -10,7 +10,7 @@ export default function ReadText({ text }: { text: Text} ) {
             <div>
                 <p className='text-6xl text-shadow-white mt-30 px-5 text-center'>{text.text}</p>
             </div>
-            <CancelAdmin />
+            <CancelPage />
         </>
     )
 }
