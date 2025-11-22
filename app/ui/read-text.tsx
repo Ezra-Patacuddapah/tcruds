@@ -1,7 +1,7 @@
 'use client'
 
 import { Text } from '@/app/lib/definitions'
-import { CancelPage } from './admin/cancel'
+import CancelPage from './admin/cancel'
 
 export default function ReadText({ text }: { text: Text} ) {
 

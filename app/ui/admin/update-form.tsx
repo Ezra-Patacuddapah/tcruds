@@ -4,7 +4,7 @@ import { updateText, State } from '@/app/lib/actions'
 import { Text } from '@/app/lib/definitions'
 import { useActionState } from 'react'
 import { PaperAirplaneIcon } from '@heroicons/react/24/solid'
-import Cancel from './cancel'
+import CancelPage from './cancel'
 
 export default function UpdateTextForm({ text }: { text: Text} ) {
     const initialState: State = { message: null, errors: {} }
@@ -30,7 +30,7 @@ export default function UpdateTextForm({ text }: { text: Text} ) {
                     ))
                 }
             </div>
-            <Cancel />
+            <CancelPage />
         </>
     )
 }
