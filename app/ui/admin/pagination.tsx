@@ -73,7 +73,7 @@ function PaginationNumber({
     position?: 'first' | 'last' | 'middle' | 'single';
 }) {
     const className = clsx(
-        'flex w-9 h-9 justify-center items-center text-sm bg-gray-600 border border-blue-400 text-blue-400',
+        'flex w-9 h-9 justify-center items-center text-sm bg-gray-600 border border-blue-400 text-blue-400 md:text-lg',
         {
             'rounded-l-md': position === 'first' || position === 'single',
             'rounded-r-md': position === 'last' || position === 'single',
@@ -105,7 +105,7 @@ function PaginationNav ({
         'rounded-md mt-2',
         {
             'pointer-events-none invisible': isDisabled,
-            'hover:bg-gray-200 hover: text-gray-800': !isDisabled,
+            'hover:bg-gray-900 hover: text-gray-800 md:pt-2 md:px-1 md:mb-1': !isDisabled,
             'mr-2 md:mr-4': direction === 'left',
             'ml-2 md:ml-4': direction === 'right',
         }
@@ -114,11 +114,11 @@ function PaginationNav ({
     const navBtn = 
         direction === 'left' ? (
             <button>
-                <ChevronLeftIcon className='w-5 h-5 text-blue-400' />
+                <ChevronLeftIcon className='w-5 h-5 md:w-7 md:h-7 text-blue-400 cursor-pointer md:pr-1' />
             </button>
         ) : (
             <button>
-                <ChevronRightIcon className='w-5 h-5 text-blue-400' />
+                <ChevronRightIcon className='w-5 h-5 md:w-7 md:h-7 text-blue-400 cursor-pointer md:pl-1' />
             </button>
         )
 
