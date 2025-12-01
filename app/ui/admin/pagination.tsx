@@ -102,10 +102,10 @@ function PaginationNav ({
     isDisabled: boolean;
 }) {
     const className = clsx(
-        'rounded-md mt-2',
+        'rounded-md flex justify-center p-1 items-center text-sm md:bg-gray-600  text-blue-400 md:text-lg',
         {
             'pointer-events-none invisible': isDisabled,
-            'hover:bg-gray-900 hover: text-gray-800 md:pt-2 md:px-1 md:mb-1': !isDisabled,
+            'hover:bg-gray-900 text-blue-400': !isDisabled,
             'mr-2 md:mr-1': direction === 'left',
             'ml-2 md:ml-1': direction === 'right',
         }
@@ -113,12 +113,14 @@ function PaginationNav ({
 
     const navBtn = 
         direction === 'left' ? (
-            <button>
-                <ChevronLeftIcon className='w-5 h-5 md:w-7 md:h-7 text-blue-400 cursor-pointer md:pr-1' />
+            <button className='flex justify-center items-center cursor-pointer md:pr-2'>
+                <ChevronLeftIcon className='w-5 h-5 md:w-7 md:h-7 md:pr-1' />
+                <span className="hidden md:block">Previous</span>
             </button>
         ) : (
-            <button>
-                <ChevronRightIcon className='w-5 h-5 md:w-7 md:h-7 text-blue-400 cursor-pointer md:pl-1' />
+            <button className='flex justify-center items-center cursor-pointer md:pl-2'>
+                <span className="hidden md:block">Next</span>
+                <ChevronRightIcon className='w-5 h-5 md:w-7 md:h-7 md:pl-1' />
             </button>
         )
 
