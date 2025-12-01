@@ -23,7 +23,7 @@ export default function LoginForm() {
         >
             <label htmlFor="name" className="my-1 flex">
                 <UserIcon className="w-5 h-5 text-gray-400" />
-                <span className="hidden md:block">Name</span>
+                <span className="hidden md:block ml-1">Name</span>
             </label>
             <input 
                 type="text" 
@@ -34,8 +34,8 @@ export default function LoginForm() {
                 className={inputStyles}
             />
             <label htmlFor="password" className="my-1 flex">
-                <KeyIcon className="w-5 h-5 text-gray-400 md:mr-2" />
-                <span>Password</span>
+                <KeyIcon className="w-5 h-5 text-gray-400" />
+                <span className="hidden md:block ml-2">Password</span>
             </label>
             <input 
                 type="password" 
